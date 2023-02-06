@@ -111,7 +111,7 @@
                 <div class="fs-12">
                     <p class="">The customer’s benefit from the technology, but this is aimed at helping Brokers, lead generators, equipment vendors, medical practices, dealerships, accountants, financial planners, travel agencies and anyone else who needs to offer their clients competitive and transparent loan options.</p>
                     <div>Due to the size & scale of our lending panel, it also provides other asset finance brokers additional lenders with whom they may not hold an accreditation with. It allows them to capture a lead or an entire application from start to finish including supporting documentation and digitally signed documents.</div>
-                    <a href="" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-700 px-4 mt-4">Become A Partner Today</a>
+                    <a href="#" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-700 px-4 mt-4">Become A Partner Today</a>
                 </div>
             </div>
             <div class="col-auto order-1 order-md-2"><?= renderImg('sb.png', 'lib') ?></div>
@@ -132,23 +132,23 @@
         </div>
         <div class="row justify-content-center gx-2 py-4">
             <div class="col-auto">
-                <a href="" class=""><?= renderImg("fb.png", 'lib') ?></a>
+                <a href="#" class=""><?= renderImg("fb.png", 'lib') ?></a>
             </div>
             <div class="col-auto">
-                <a href="" class=""><?= renderImg("twitter.png", 'lib') ?></a>
+                <a href="#" class=""><?= renderImg("twitter.png", 'lib') ?></a>
             </div>
             <div class="col-auto">
-                <a href="" class=""><?= renderImg("instagram.png", 'lib') ?></a>
+                <a href="#" class=""><?= renderImg("instagram.png", 'lib') ?></a>
             </div>
             <div class="col-auto">
-                <a href="" class=""><?= renderImg("youtube.png", 'lib') ?></a>
+                <a href="#" class=""><?= renderImg("youtube.png", 'lib') ?></a>
             </div>
         </div>
         <div><?= renderImg('algorithm.png', 'lib') ?></div>
         <div class="row gx-2 justify-content-center pt-4">
-            <div class="col-auto text-center"><a href="" class="fs-11 text-primary-light text-decoration-none"><u>Discover Loan Options</u></a></div>
-            <div class="col-auto text-center"><a href="" class="fs-11 text-primary-light text-decoration-none"><u>Contact Us</u></a></div>
-            <div class="col-auto text-center"><a href="" class="fs-11 text-primary-light text-decoration-none"><u>Unsubscribe</u></a></div>
+            <div class="col-auto text-center"><a href="#" class="fs-11 text-primary-light text-decoration-none"><u>Discover Loan Options</u></a></div>
+            <div class="col-auto text-center"><a href="#" class="fs-11 text-primary-light text-decoration-none"><u>Contact Us</u></a></div>
+            <div class="col-auto text-center"><a href="#" class="fs-11 text-primary-light text-decoration-none"><u>Unsubscribe</u></a></div>
         </div>
     </div>
 </footer>
