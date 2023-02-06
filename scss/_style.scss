@@ -1,0 +1,75 @@
+@function imgUrl($file, $path: "background") {
+    @return url("../images/" + $path + "/" + $file) no-repeat;
+}
+
+header {
+    background: $dark;
+    padding: 27px;
+}
+
+section.banner {
+    background: $dark;
+    color: $white;
+}
+
+section.partner {
+    background: $tertiary;
+    padding: 20px 0 40px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 40px 0;
+    }
+}
+
+section.affiliate-partner {
+    background: $dark;
+    padding: 58px 40px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 40px 0;
+    }
+
+    .affiliate-partner-img {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .play-button {
+        position: absolute;
+        border: 0;
+        background: none;
+        border-radius: 50%;
+    }
+}
+
+section.seamless-integration {
+    background: $primary;
+    color: $white;
+    padding: 40px 0;
+}
+
+section.implementation {
+    padding: 40px 0;
+    background: $tertiary;
+}
+
+section.solution {
+    padding: 40px 0;
+    background: $dark;
+    color: $white;
+}
+
+section.for-whom {
+    background: $quartinary;
+    color: $white;
+    padding: 40px 0;
+}
+
+footer {
+    background: $primary;
+    padding: 40px 0;
+    text-align: center;
+}
