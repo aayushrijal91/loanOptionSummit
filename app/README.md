@@ -1,4 +1,4 @@
-# Landing page [Boilerplate](www.aiims.com.au)
+# Landing page [Loan Options | Affiliate Business Summit](https://www.aiims.com.au)
 
 This is a landing page boilerplate that uses PHP scripting language
 
@@ -8,8 +8,8 @@ Developer: [Aayush Rijal](https://www.aayushrijal.net)
 
 Contact: 0452637371
 
-[Github]()
-[Figma]()
+[Github](https://github.com/aayushrijal91/loanOptionSummit)
+[Figma](https://www.figma.com/file/7Td8ZrwspeOMFY7IcrUr4S/Branding-Identity---Stage-1---Presentation?node-id=5411%3A11200&t=yG0LGk6vLDMMznTv-0)
 
 ## _Instruction_
 
