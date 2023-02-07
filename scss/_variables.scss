@@ -27,13 +27,13 @@ $theme-colors: map-merge(("primary": $primary,
 );
 
 $font-sizes: (
-    36: 36px,
-    33: 33px,
-    20: 20px,
-    17: 17px,
-    12: 12px,
-    11: 11px,
-    9: 9px,
+    36: 72px,
+    33: 66px,
+    20: 40px,
+    17: 34px,
+    12: 24px,
+    11: 22px,
+    9: 18px,
 );
 
 // Grid Breakpoints
@@ -49,10 +49,10 @@ $grid-breakpoints: (
 // Container sizing
 $container-max-widths: (
     sm: 540px,
-    md: 600px,
-    lg: 601px,
-    xl: 602px,
-    xxl: 603px,
+    md: 740px,
+    lg: 1280px,
+    xl: 1281px,
+    xxl: 1282px,
     ) !default;
 
 $spacer: 1rem !default;
