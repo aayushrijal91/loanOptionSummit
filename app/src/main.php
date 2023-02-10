@@ -1,133 +1,6 @@
-<div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content bg-dark">
-
-            <div class="modal-header  border-0">
-                <div class="site_logo">
-                    <a href="./"><?= renderImg("logo.png", "logo") ?></a>
-                </div>
-                <button type="button" class="d-flex align-items-center btn btn-outline-light text-white text-nowrap px-4 py-2 border rounded-pill border-white text-decoration-none fw-600 gap-2" data-bs-dismiss="modal" aria-label="Close">
-                    <div>Return</div>
-                    <div>
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 2L12 13M9 5L1 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <circle cx="12" cy="2" r="2" fill="#F33829" />
-                        </svg>
-                    </div>
-                </button>
-            </div>
-
-            <div class="modal-body d-flex ">
-                <div class="container my-auto">
-                    <div class="row ddmenu gx-xl-10">
-                        <div class="col-xl-6 border-end border-dpurple">
-                            <div>
-                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="about">
-                                    <div class="text-lightgrey fw-600">About Us</div>
-                                    <div class="text-menu fs-96 lh-1 fw-800">LoanOptions</div>
-                                </a>
-                            </div>
-                            <div class="d-xl-none mb-4">
-                                <div class="submenu fw-500 fs-20  mb-4 border-bottom border-dpurple" key="about">
-                                    <ul class=" list-unstyled">
-                                        <li class="mb-1"><a href="/about-us" class="text-decoration-none text-white ">Discover Loan Options <small class="ms-2 bg-info px-3 py-2 fw-600 rounded-pill ">HOT</small></a></li>
-                                        <li class="mb-1"><a href="/meet-the-team" class="text-decoration-none text-white ">Meet the ‘Genius’ Team</a></li>
-                                        <li class="mb-1"><a href="/careers" class="text-decoration-none text-white ">Careers</a></li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div>
-                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="loan">
-                                    <div class="text-lightgrey fw-600">Type of Loans</div>
-                                    <div class="text-menu fs-96 lh-1 fw-800">Loans</div>
-                                </a>
-                            </div>
-                            <div class="d-xl-none mb-4">
-                                <div class="submenu fw-500 fs-20 mb-4 border-bottom border-dpurple" key="loan">
-                                    <ul class=" list-unstyled">
-                                        <?php foreach ($loan_menu as $loan) {   ?>
-                                            <li class="mb-1"><a href="<?= $loan['url'] ?>" class="text-decoration-none text-white"><?php echo $loan['title']; ?></a></li>
-
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div>
-                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="faq">
-                                    <div class="text-lightgrey fw-600">FAQ & Resource Centre</div>
-                                    <div class="text-menu fs-96 lh-1 fw-800">The Bunker</div>
-                                </a>
-                            </div>
-                            <div class="d-xl-none mb-4">
-                                <div class="submenu fw-500 fs-20 mb-4 border-bottom border-dpurple" key="faq">
-                                    <ul class=" list-unstyled">
-                                        <li class="mb-1"><a href="/faqs" class="text-decoration-none text-white ">FAQ - Frequently Asked Questions</a></li>
-                                        <li class="mb-1"><a href="/blog" class="text-decoration-none text-white ">Blogs</a></li>
-                                        <li class="mb-1"><a href="/news-room" class="text-decoration-none text-white ">Newsroom</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div>
-                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="partners">
-                                    <div class="text-lightgrey fw-600">Our Partners</div>
-                                    <div class="text-menu fs-96 lh-1 fw-800">The Partners</div>
-                                </a>
-                            </div>
-                            <div class="d-xl-none mb-4">
-                                <div class="submenu fw-500 fs-20 mb-4 border-bottom border-dpurple" key="partners">
-                                    <ul class=" list-unstyled">
-                                        <li class="mb-1"><a href="https://skynet.driveiq.com.au/" class="text-decoration-none text-white ">Partner Log In</a></li>
-                                        <li class="mb-1"><a href="/affiliate" class="text-decoration-none text-white ">Become An Affiliate</a></li>
-                                        <li class="mb-1"><a href="/integration-process" class="text-decoration-none text-white ">Integration Process</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 d-none d-xl-block">
-
-                            <div class="submenu mt-5 fw-500 fs-20" key="about">
-                                <ul class=" list-unstyled">
-                                    <li class="mb-3"><a href="/about-us" class="text-decoration-none text-white ">Discover Loan Options <small class="ms-2 bg-primary px-3 py-2 fw-700 rounded-pill ">HOT</small></a></li>
-                                    <li class="mb-3"><a href="/meet-the-team" class="text-decoration-none text-white ">Meet the ‘Genius’ Team</a></li>
-                                    <li class="mb-3"><a href="/careers" class="text-decoration-none text-white ">Careers</a></li>
-
-                                </ul>
-                            </div>
-
-                            <div class="submenu mt-5 fw-500 fs-20" key="loan">
-                                <ul class=" list-unstyled">
-                                    <?php foreach ($loan_menu as $ind => $loan) {   ?>
-                                        <li class="mb-3"><a href="<?= $loan['url'] ?>" class="text-decoration-none text-white"><?php echo $loan['title']; ?></a></li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-
-                            <div class="submenu mt-5 fw-500 fs-20" key="faq">
-                                <ul class=" list-unstyled">
-                                    <li class="mb-3"><a href="/faqs" class="text-decoration-none text-white ">FAQ - Frequently Asked Questions</a></li>
-                                    <li class="mb-3"><a href="/blog" class="text-decoration-none text-white ">Blogs</a></li>
-                                    <li class="mb-3"><a href="/news-room" class="text-decoration-none text-white ">Newsroom</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="submenu mt-5 fw-500 fs-20" key="partners">
-                                <ul class=" list-unstyled">
-                                    <li class="mb-3"><a href="https://skynet.driveiq.com.au/" class="text-decoration-none text-white ">Partner Log In</a></li>
-                                    <li class="mb-3"><a href="/affiliate" class="text-decoration-none text-white ">Become An Affiliate</a></li>
-                                    <li class="mb-3"><a href="/integration-process" class="text-decoration-none text-white ">Integration Process</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <header>
     <div class="container-fluid">
-        <div class="row justify-content-center justify-content-lg-between align-items-center gy-4">
+        <div class="row justify-content-between align-items-center">
             <div class="col-auto">
                 <a href="./">
                     <?= renderImg("logo.png", "logo") ?>
@@ -135,7 +8,7 @@
             </div>
             <div class="col-auto">
                 <div class="row align-items-center gx-6">
-                    <div class="col-auto d-flex align-items-center gap-2 border-end border-primary-light">
+                    <div class="col-auto d-none d-xl-flex align-items-center gap-2 border-end border-primary-light">
                         <div>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15 5.889C14.7401 7.56441 13.6593 8.6554 12.0772 8.80717C11.6439 9.59935 10.9909 10.2632 10.1893 10.7264C9.58402 11.0762 8.91153 11.3015 8.21483 11.3909V14.0435H9.58397C10.0376 14.0444 10.4723 14.2165 10.793 14.5221C11.1138 14.8276 11.2944 15.2418 11.2954 15.6739C11.2954 15.7604 11.2593 15.8433 11.1951 15.9045C11.131 15.9656 11.0439 16 10.9531 16H4.10742C4.01664 16 3.92958 15.9656 3.86539 15.9045C3.80119 15.8433 3.76513 15.7604 3.76513 15.6739C3.76613 15.2418 3.94676 14.8276 4.2675 14.5221C4.58823 14.2165 5.02296 14.0444 5.47656 14.0435H6.8457V11.3909C6.149 11.3015 5.47651 11.0762 4.87127 10.7264C4.06959 10.2632 3.41661 9.59935 2.98335 8.80717C1.15795 8.63206 0 7.20674 0 5.07609V2.46739C0 2.33767 0.0540931 2.21325 0.150379 2.12152C0.246666 2.02979 0.377258 1.97826 0.513427 1.97826H2.39599V1.32609C2.39599 1.2396 2.43206 1.15666 2.49625 1.09551C2.56044 1.03436 2.6475 1 2.73828 1H10.1669C10.0843 1.31962 10.0404 1.6547 10.0404 2C10.0404 3.72174 11.1326 5.18942 12.6645 5.75322V6.54348C12.6629 6.9424 12.6098 7.33963 12.5064 7.7262C13.4036 7.43991 13.7821 6.68318 13.9356 5.99822C13.9757 5.9994 14.0161 6 14.0565 6C14.3815 6 14.6974 5.96156 15 5.889ZM1.02685 5.07609V2.95652H2.39599V6.54348C2.39758 6.9424 2.45069 7.33963 2.55413 7.7262C1.198 7.29348 1.02685 5.78598 1.02685 5.07609Z" fill="#9159E8" />
@@ -144,7 +17,7 @@
                         </div>
                         <a href="https://loanoptions.ai/#awards" class=" text-decoration-none text-white text-nowrap fw-600">Award-Winning Business</a>
                     </div>
-                    <div class="col-auto d-flex align-items-center gap-2 border-end border-primary-light">
+                    <div class="col-auto d-none d-xl-flex align-items-center gap-2 border-end border-primary-light">
                         <div class="position-relative">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 0L9.98545 6.22255H16L11.2131 9.888L13.1985 16L8 12.2225L2.80145 16L4.78691 9.888L0 6.22255H6.01455L8 0Z" fill="#9159E8" />
@@ -153,7 +26,7 @@
                         </div>
                         <a href="https://www.google.com/maps/place/LoanOptions.ai/@-33.8344034,151.0873962,15z/data=!4m2!3m1!1s0x0:0xc077907404b9b979?sa=X&amp;ved=2ahUKEwjzmcjL_Nb6AhWCleYKHRYTD7cQ_BJ6BAheEB8" class="text-decoration-none text-white text-nowrap fw-600">383 Google Reviews</a>
                     </div>
-                    <div class="col-auto d-flex align-items-center gap-2 border-end border-primary-light">
+                    <div class="col-auto align-items-center gap-2 border-end border-primary-light d-none d-lg-flex">
                         <div class="position-relative">
                             <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.257 9.1001L9.70815 7.88212C9.45602 7.76201 9.17415 7.73481 8.90622 7.80473C8.63828 7.87465 8.39924 8.03779 8.22615 8.26886L7.45671 9.30572C6.2098 8.45147 5.15223 7.31286 4.35865 5.97029L5.32065 5.14255C5.53598 4.95636 5.6881 4.69873 5.75335 4.40976C5.81859 4.1208 5.7933 3.81671 5.6814 3.54483L4.54959 0.800014C4.42935 0.508475 4.21692 0.272371 3.95012 0.133763C3.68333 -0.004845 3.37951 -0.036955 3.09278 0.0431536L0.938032 0.646017C0.640761 0.729646 0.382292 0.927779 0.211586 1.20289C0.0408795 1.47799 -0.03021 1.81097 0.0117833 2.13874C0.410814 5.12874 1.69849 7.89909 3.682 10.035C5.66552 12.1709 8.23813 13.5574 11.0146 13.9869C11.0717 13.9956 11.1293 14 11.1869 14C11.4643 13.9998 11.7338 13.9006 11.9533 13.7179C12.1728 13.5352 12.3299 13.2793 12.4 12.9903L12.959 10.6689C13.0344 10.3603 13.0052 10.0327 12.8765 9.74515C12.7478 9.4576 12.5282 9.22888 12.257 9.1001Z" fill="#9159E8" />
@@ -165,12 +38,12 @@
                             <div class="phone-hidden"><?= $phone_number ?></div>
                         </a>
                     </div>
-                    <div class="col-auto">
+                    <div class="col-auto d-none d-lg-block">
                         <a href="https://skynet.driveiq.com.au/" target="_blank" class="btn border border-primary rounded-pill text-nowrap px-lg-4 px-3 py-2 text-white fs-18 fw-600">Partner Login</a>
                     </div>
                     <div class="col-auto ps-0">
                         <button type="button" class="btn btn-primary d-flex align-items-center gap-2 rounded-pill text-nowrap px-lg-4 px-3 py-2 fs-18 fw-600" data-bs-toggle="modal" data-bs-target="#menuModal">
-                            <div>Explore</div>
+                            <div class="d-none d-lg-block">Explore</div>
                             <div class="position-relative">
                                 <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 12H15M1 1H11M1 6.5H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -188,15 +61,15 @@
 <section class="banner pt-4">
     <div class="container">
         <div class="row align-items-end justify-content-between gx-lg-6">
-            <div class="col-md-6 py-4 text-center text-md-start">
+            <div class="col-lg-6 py-4 text-center text-md-start">
                 <div class="fs-80 fw-900 lh-1">Meet Julian & Robbie<span class="text-secondary">.</span></div>
                 <div class="py-4 fs-22">Come find us at the Better Business Summit</div>
                 <div><?= renderImg('summit-awards.png', 'lib') ?></div>
                 <div class="text-end pb-5">
-                    <a href="https://loanoptions.ai/affiliate#apply-now" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-3 mt-4 fs-22">Become A Partner Today</a>
+                    <a href="https://loanoptions.ai/affiliate#apply-now" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-2 py-md-3 mt-4 fs-22">Become A Partner Today</a>
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-lg">
                 <?= renderImg('julian-and-robbie.png', 'lib', 'w-100') ?>
             </div>
         </div>
@@ -209,7 +82,7 @@
             <div class="col">
                 <div class="text-primary fw-900 fs-72 lh-1 text-center text-md-start">Become a LoanOptions Partner<span class="text-secondary">.</span></div>
             </div>
-            <div class="col-auto"><?= renderImg('superhero.png', 'lib') ?></div>
+            <div class="col-auto col-lg col-xl-auto"><?= renderImg('superhero.png', 'lib') ?></div>
         </div>
     </div>
 </section>
@@ -242,7 +115,7 @@
 <section class="seamless-integration">
     <div class="container">
         <div class="row justify-content-center align-items-center gy-4">
-            <div class="col-auto"><?= renderImg('seamless-integration.png', 'lib') ?></div>
+            <div class="col-auto col-lg col-xl-auto"><?= renderImg('seamless-integration.png', 'lib') ?></div>
             <div class="col-md">
                 <div class="fw-900 fs-50 pb-5 lh-1">Seamless Integration<span class="text-secondary">.</span></div>
                 <div class="fs-24">
@@ -264,7 +137,7 @@
                     <div>We got so sick of seeing boring “enquire now” finance enquiry forms that lead nowhere and fail to offer the customer any real value from our dinosaur industry.</div>
                 </div>
             </div>
-            <div class="col-auto order-1 order-md-2"><?= renderImg('implementation.png', 'lib') ?></div>
+            <div class="col-auto col-lg col-xl-auto order-1 order-md-2"><?= renderImg('implementation.png', 'lib') ?></div>
         </div>
     </div>
 </section>
@@ -304,10 +177,10 @@
                         <p>The customer’s benefit from the technology, but this is aimed at helping Brokers, lead generators, equipment vendors, medical practices, dealerships, accountants, financial planners, travel agencies and anyone else who needs to offer their clients competitive and transparent loan options.</p>
                         <div>Due to the size & scale of our lending panel, it also provides other asset finance brokers additional lenders with whom they may not hold an accreditation with. It allows them to capture a lead or an entire application from start to finish including supporting documentation and digitally signed documents.</div>
                     </div>
-                    <a href="https://loanoptions.ai/affiliate#apply-now" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-3 mt-4 fs-22">Become A Partner Today</a>
+                    <a href="https://loanoptions.ai/affiliate#apply-now" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-2 py-md-3 mt-4 fs-22">Become A Partner Today</a>
                 </div>
             </div>
-            <div class="col-auto order-1 order-md-2"><?= renderImg('sb.png', 'lib') ?></div>
+            <div class="col-auto col-lg col-xl-auto order-1 order-md-2"><?= renderImg('sb.png', 'lib') ?></div>
         </div>
     </div>
 </section>
@@ -377,11 +250,11 @@
     <div class="container">
         <div class="bg-primary rounded-20 p-xl-5 p-4 mb-5 d-none d-lg-block">
             <div class="row align-items-center">
-                <div class="col-xl col-12">
-                    <p class="fs-64 fw-900 font-articulat-heavy">More Options, More You<span class="text-secondary rounded-full">.</span></p>
+                <div class="col-lg">
+                    <p class="fs-64 fw-900 font-articulat-heavy lh-1">More Options, More You<span class="text-secondary rounded-full">.</span></p>
                     <p class="fs-20 fw-500">Australia’s first artificial intelligence loan marketplace for all types of loans</p>
                 </div>
-                <div class="col-xl-auto col-12"><a href="https://loanoptions.ai/application" class="btn btn-secondary text-white fw-600 rounded-pill px-4 py-3 mt-4 mt-xl-0">Try our FREE Loan Matching Technology</a></div>
+                <div class="col-lg-auto"><a href="https://loanoptions.ai/application" class="btn btn-secondary text-white fw-600 rounded-pill px-4 py-3 mt-4 mt-xl-0">Try our FREE Loan Matching Technology</a></div>
             </div>
         </div>
         <div class="row socials justify-content-center d-lg-none mb-4">
@@ -535,11 +408,139 @@
 
 <section class="copyright py-3 bg-lightblack text-darkgrey">
     <div class="container">
-        <div class="row justify-content-lg-between justify-content-center align-items-center">
-            <div class="col-auto mb-4 mb-lg-0 text-center text-lg-start">
+        <div class="row justify-content-md-between justify-content-center align-items-center gy-4">
+            <div class="col-auto text-center text-lg-start">
                 <div class="small">Copyright 2023 <span class="mx-md-3 mx-1">|</span> LoanOptions.ai <span class="mx-md-3 mx-1">|</span> All Rights Reserved</div>
             </div>
             <div class="col-auto"><a href="https://www.aiims.com.au/like-our-work/" target="_blank" title="" rel="home" class="d-inline-block "><img data-src="https://loanoptions.ai/uploads/footer/aiims_003.svg" class="lazy entered loaded" alt="Loan Option " title="" data-ll-status="loaded" src="https://loanoptions.ai/uploads/footer/aiims_003.svg"></a></div>
         </div>
     </div>
 </section>
+
+<div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-dark">
+
+            <div class="modal-header  border-0">
+                <div class="site_logo">
+                    <a href="./"><?= renderImg("logo.png", "logo") ?></a>
+                </div>
+                <button type="button" class="d-flex align-items-center btn btn-outline-light text-white text-nowrap px-4 py-2 border rounded-pill border-white text-decoration-none fw-600 gap-2" data-bs-dismiss="modal" aria-label="Close">
+                    <div>Return</div>
+                    <div>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 2L12 13M9 5L1 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="12" cy="2" r="2" fill="#F33829" />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+
+            <div class="modal-body d-flex ">
+                <div class="container my-auto">
+                    <div class="row ddmenu gx-xl-10">
+                        <div class="col-xl-6 border-end border-dpurple">
+                            <div>
+                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="about">
+                                    <div class="text-lightgrey fw-600">About Us</div>
+                                    <div class="text-menu fs-96 lh-1 fw-800">LoanOptions</div>
+                                </a>
+                            </div>
+                            <div class="d-xl-none mb-4">
+                                <div class="submenu fw-500 fs-20  mb-4 border-bottom border-dpurple" key="about">
+                                    <ul class=" list-unstyled">
+                                        <li class="mb-1"><a href="/about-us" class="text-decoration-none text-white ">Discover Loan Options <small class="ms-2 bg-primary px-3 py-2 fw-600 rounded-pill ">HOT</small></a></li>
+                                        <li class="mb-1"><a href="/meet-the-team" class="text-decoration-none text-white ">Meet the ‘Genius’ Team</a></li>
+                                        <li class="mb-1"><a href="/careers" class="text-decoration-none text-white ">Careers</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="loan">
+                                    <div class="text-lightgrey fw-600">Type of Loans</div>
+                                    <div class="text-menu fs-96 lh-1 fw-800">Loans</div>
+                                </a>
+                            </div>
+                            <div class="d-xl-none mb-4">
+                                <div class="submenu fw-500 fs-20 mb-4 border-bottom border-dpurple" key="loan">
+                                    <ul class=" list-unstyled">
+                                        <?php foreach ($loan_menu as $loan) {   ?>
+                                            <li class="mb-1"><a href="<?= $loan['url'] ?>" class="text-decoration-none text-white"><?php echo $loan['title']; ?></a></li>
+
+                                        <?php } ?>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="faq">
+                                    <div class="text-lightgrey fw-600">FAQ & Resource Centre</div>
+                                    <div class="text-menu fs-96 lh-1 fw-800">The Bunker</div>
+                                </a>
+                            </div>
+                            <div class="d-xl-none mb-4">
+                                <div class="submenu fw-500 fs-20 mb-4 border-bottom border-dpurple" key="faq">
+                                    <ul class=" list-unstyled">
+                                        <li class="mb-1"><a href="/faqs" class="text-decoration-none text-white ">FAQ - Frequently Asked Questions</a></li>
+                                        <li class="mb-1"><a href="/blog" class="text-decoration-none text-white ">Blogs</a></li>
+                                        <li class="mb-1"><a href="/news-room" class="text-decoration-none text-white ">Newsroom</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="partners">
+                                    <div class="text-lightgrey fw-600">Our Partners</div>
+                                    <div class="text-menu fs-96 lh-1 fw-800">The Partners</div>
+                                </a>
+                            </div>
+                            <div class="d-xl-none mb-4">
+                                <div class="submenu fw-500 fs-20 mb-4 border-bottom border-dpurple" key="partners">
+                                    <ul class=" list-unstyled">
+                                        <li class="mb-1"><a href="https://skynet.driveiq.com.au/" class="text-decoration-none text-white ">Partner Log In</a></li>
+                                        <li class="mb-1"><a href="/affiliate" class="text-decoration-none text-white ">Become An Affiliate</a></li>
+                                        <li class="mb-1"><a href="/integration-process" class="text-decoration-none text-white ">Integration Process</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 d-none d-xl-block">
+
+                            <div class="submenu mt-5 fw-500 fs-20" key="about">
+                                <ul class=" list-unstyled">
+                                    <li class="mb-3"><a href="/about-us" class="text-decoration-none text-white ">Discover Loan Options <small class="ms-2 bg-primary px-3 py-2 fw-700 rounded-pill ">HOT</small></a></li>
+                                    <li class="mb-3"><a href="/meet-the-team" class="text-decoration-none text-white ">Meet the ‘Genius’ Team</a></li>
+                                    <li class="mb-3"><a href="/careers" class="text-decoration-none text-white ">Careers</a></li>
+
+                                </ul>
+                            </div>
+
+                            <div class="submenu mt-5 fw-500 fs-20" key="loan">
+                                <ul class=" list-unstyled">
+                                    <?php foreach ($loan_menu as $ind => $loan) {   ?>
+                                        <li class="mb-3"><a href="<?= $loan['url'] ?>" class="text-decoration-none text-white"><?php echo $loan['title']; ?></a></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+
+                            <div class="submenu mt-5 fw-500 fs-20" key="faq">
+                                <ul class=" list-unstyled">
+                                    <li class="mb-3"><a href="/faqs" class="text-decoration-none text-white ">FAQ - Frequently Asked Questions</a></li>
+                                    <li class="mb-3"><a href="/blog" class="text-decoration-none text-white ">Blogs</a></li>
+                                    <li class="mb-3"><a href="/news-room" class="text-decoration-none text-white ">Newsroom</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="submenu mt-5 fw-500 fs-20" key="partners">
+                                <ul class=" list-unstyled">
+                                    <li class="mb-3"><a href="https://skynet.driveiq.com.au/" class="text-decoration-none text-white ">Partner Log In</a></li>
+                                    <li class="mb-3"><a href="/affiliate" class="text-decoration-none text-white ">Become An Affiliate</a></li>
+                                    <li class="mb-3"><a href="/integration-process" class="text-decoration-none text-white ">Integration Process</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
