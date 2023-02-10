@@ -66,7 +66,7 @@
                 <div class="py-4 fs-22">Come find us at the Better Business Summit</div>
                 <div><?= renderImg('summit-awards.png', 'lib') ?></div>
                 <div class="text-end pb-5">
-                    <a href="https://loanoptions.ai/affiliate#apply-now" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-2 py-md-3 mt-4 fs-22">Become A Partner Today</a>
+                    <a href="#form" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-2 py-md-3 mt-4 fs-22">Become A Partner Today</a>
                 </div>
             </div>
             <div class="col-lg">
@@ -177,7 +177,7 @@
                         <p>The customer’s benefit from the technology, but this is aimed at helping Brokers, lead generators, equipment vendors, medical practices, dealerships, accountants, financial planners, travel agencies and anyone else who needs to offer their clients competitive and transparent loan options.</p>
                         <div>Due to the size & scale of our lending panel, it also provides other asset finance brokers additional lenders with whom they may not hold an accreditation with. It allows them to capture a lead or an entire application from start to finish including supporting documentation and digitally signed documents.</div>
                     </div>
-                    <a href="https://loanoptions.ai/affiliate#apply-now" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-2 py-md-3 mt-4 fs-22">Become A Partner Today</a>
+                    <a href="#form" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-2 py-md-3 mt-4 fs-22">Become A Partner Today</a>
                 </div>
             </div>
             <div class="col-auto col-lg col-xl-auto order-1 order-md-2"><?= renderImg('sb.png', 'lib') ?></div>
@@ -189,17 +189,25 @@
     <div class="container">
         <div class="form card border-0 shadow rounded-20 py-xl-6 py-5 px-xl-9 px-md-5 px-4">
             <div class="title fs-64 fw-800 text-black mb-xl-9 mb-5 lh-1">Schedule A Demo<span>.</span></div>
-            <form id="regForm1" action="#" method="POST">
+            <form id="regForm1" action="./src/form" method="POST">
+                <input type="hidden" name="token" id="recaptchaResponse" class="recaptchaResponse">
                 <div class="multi-step-form">
                     <div class="multi-step-form-slider">
                         <div class="tab">
                             <div class="step fs-20 fw-500 text-darkgrey mb-4">Step 1/4</div>
                             <div class="row gx-5 gy-4">
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center"><label>What’s your human <span class="color">first name?</span></label> <span class="points">+25 Points</span></div> <input type="text" placeholder="First Name" class="form-control required" name="fname">
+                                    <div class="d-flex align-items-center">
+                                        <label>What’s your human <span class="color">first name?</span></label>
+                                        <span class="points">+25 Points</span>
+                                    </div>
+                                    <input type="text" placeholder="First Name" class="form-control required" name="fname">
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="d-flex align-items-center"><label>What’s your human <span class="color">last name?</span></label> <span class="points">+25 Points</span></div> <input type="text" placeholder="Last Name" class="form-control required" name="lname">
+                                    <div class="d-flex align-items-center">
+                                        <label>What’s your human <span class="color">last name?</span></label> <span class="points">+25 Points</span>
+                                    </div>
+                                    <input type="text" placeholder="Last Name" class="form-control required" name="lname">
                                 </div>
                             </div>
                         </div>
@@ -207,7 +215,10 @@
                             <div class="step fs-20 fw-500 text-darkgrey mb-4">Step 2/4</div>
                             <div class="row gx-5 gy-4">
                                 <div class="col-12">
-                                    <div class="d-flex align-items-center"><label>What’s is your <span class="color">email?</span></label> <span class="points">+20 Points</span></div> <input type="email" placeholder="Email Address" class="form-control required" name="email">
+                                    <div class="d-flex align-items-center">
+                                        <label>What’s is your <span class="color">email?</span></label> <span class="points">+20 Points</span>
+                                    </div>
+                                    <input type="email" placeholder="Email Address" class="form-control required" name="email">
                                 </div>
                             </div>
                         </div>
@@ -215,7 +226,10 @@
                             <div class="step fs-20 fw-500 text-darkgrey mb-4">Step 3/4</div>
                             <div class="row gx-5 gy-4">
                                 <div class="col-12">
-                                    <div class="d-flex align-items-center"><label>Contact Number</label> <span class="points">+20 Points</span></div> <input type="tel" placeholder="Number" class="form-control required" name="number">
+                                    <div class="d-flex align-items-center">
+                                        <label>Contact Number</label> <span class="points">+20 Points</span>
+                                    </div>
+                                    <input type="tel" placeholder="Number" class="form-control required" name="phone">
                                 </div>
                             </div>
                         </div>
@@ -223,7 +237,10 @@
                             <div class="step fs-20 fw-500 text-darkgrey mb-4">Step 4/4</div>
                             <div class="row gx-5">
                                 <div class="col-12">
-                                    <div class="d-flex align-items-center"><label>Business Name</label> <span class="points">+50 Points</span></div> <input type="text" placeholder="Business Name" class="form-control required" name="business">
+                                    <div class="d-flex align-items-center">
+                                        <label>Business Name</label> <span class="points">+50 Points</span>
+                                    </div>
+                                    <input type="text" placeholder="Business Name" class="form-control required" name="business">
                                 </div>
                             </div>
                         </div>
@@ -239,7 +256,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buttons d-flex align-items-center justify-content-md-start justify-content-center flex-wrap mt-5"> <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> <span class="px-3 py-md-0 py-2" id="prevBtn" onclick="nextPrev(-1)">Go Back</span> </div>
+                    <div class="buttons d-flex align-items-center justify-content-md-start justify-content-center flex-wrap mt-5">
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> <span class="px-3 py-md-0 py-2" id="prevBtn" onclick="nextPrev(-1)">Go Back</span>
+                    </div>
                 </div>
             </form>
         </div>

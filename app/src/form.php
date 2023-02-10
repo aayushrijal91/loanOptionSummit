@@ -18,10 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
 
         $subject = "Message from " . $site;
 
-        $name = $_POST['name'];
+        $firstName = $_POST['fname'];
+        $lastName = $_POST['lname'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
-        $message = $_POST['message'];
+        $business = $_POST['business'];
 
         $message = '<!DOCTYPE html>
                 <html>
@@ -47,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
                 <body><table><tbody>' .
             '<tr>' .
             '<td>Name</td>' .
-            '<td><b>' . strip_tags($name) . '</b></td>' .
+            '<td><b>' . strip_tags($fname) . " " . strip_tags($lname) . '</b></td>' .
             '</tr>' .
             '<tr>' .
             '<td>Phone</td>' .
@@ -58,8 +59,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
             '<td><b>' . strip_tags($email) . '</b></td>' .
             '</tr>' .
             '<tr>' .
-            '<td>Message</td>' .
-            '<td><b>' . strip_tags($message) . '</b></td>' .
+            '<td>Business</td>' .
+            '<td><b>' . strip_tags($business) . '</b></td>' .
             '</tr>' .
             '</tbody></table></body></html>';
 

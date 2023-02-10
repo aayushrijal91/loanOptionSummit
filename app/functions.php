@@ -3,9 +3,9 @@ include __DIR__ . '/env.php';
 
 $site = "Loan Options | Affiliate Business Summit";
 $phone_number = "1300 060 684";
-$admin_email = 'arijal@aiims.com.au';
+$admin_email = 'arijal@aiims.com.au'; // 'info@loanoptions.ai';
 $bcc_email = "";
-$no_reply_email = 'info@website.com.au';
+$no_reply_email = 'info@loanoptions.ai';
 $recaptcha_client_secret = $client_secret;
 $recaptcha_server_secret = $server_secret;
 

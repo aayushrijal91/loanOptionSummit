@@ -55,8 +55,6 @@ function showTab(n) {
         $("#nextBtn").html('Next');
         $("#nextBtn").removeClass('form-submit');
     }
-    /*  if (n == (x.length - 1)) {          $('.form .title').removeClass('d-block').addClass('d-none');          $('.buttons').removeClass('d-flex').addClass('d-none');      } else {          $('.form .title').removeClass('d-none').addClass('d-block');          $('.buttons').removeClass('d-none').addClass('d-flex');      }*/
-
 }
 
 function nextPrev(n) {
@@ -79,14 +77,8 @@ function validateForm() {
     y = x[currentTab].querySelectorAll('input[type="text"], input[type="tel"], input[type="email"]');
     z = x[currentTab].getElementsByClassName("invalid-feedback");
 
-    // A loop that checks every input form-control field in the current tab: 
-
     for (i = 0; i < y.length; i++) {
-        // If a field is empty...
         if (y[i].value == "") {
-            // add an "invalid" class to the field:
-            // y[i].className += "invalid ";
-            // and set the current valid status to false
             valid = false;
         }
 
@@ -97,7 +89,7 @@ function validateForm() {
         }
     }
 
-    return valid; // return the valid status
+    return valid;
 }
 
 $(".ddmenu .menui").on('click', function () {
