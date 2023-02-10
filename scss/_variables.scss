@@ -4,10 +4,13 @@ $secondary: #F33829;
 $tertiary: #F0F0F6;
 $quartinary: #320873;
 $dark: #161529;
+$lightblack: #0f0e1e;
 $white: #ffffff;
 $black: #000000;
 $light: #F0F0F6;
 $grey: #d9d9d9;
+$darkgrey: #a8a8b4;
+$dpurple: #313042;
 
 $theme-colors: (
     ) !default;
@@ -20,20 +23,25 @@ $theme-colors: map-merge(("primary": $primary,
             "black": $black,
             "white": $white,
             "light": $light,
+            "lightblack": $lightblack,
             "dark": $dark,
             "grey": $grey,
+            "darkgrey": $darkgrey,
+            "dpurple": $dpurple,
         ),
         $theme-colors
 );
 
 $font-sizes: (
-    36: 72px,
-    33: 66px,
-    20: 40px,
-    17: 34px,
-    12: 24px,
-    11: 22px,
-    9: 18px,
+    72: 72px,
+    66: 66px,
+    64: 64px,
+    40: 40px,
+    34: 34px,
+    24: 24px,
+    22: 22px,
+    20: 20px,
+    18: 18px,
 );
 
 // Grid Breakpoints
@@ -51,8 +59,8 @@ $container-max-widths: (
     sm: 540px,
     md: 740px,
     lg: 1280px,
-    xl: 1281px,
-    xxl: 1282px,
+    xl: 1441px,
+    xxl: 1442px,
     ) !default;
 
 $spacer: 1rem !default;

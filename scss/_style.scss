@@ -5,6 +5,38 @@
 header {
     background: $dark;
     padding: 27px;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+
+    .call-now {
+        transition: .5s ease;
+        position: relative;
+        text-decoration: none;
+        color: $white;
+
+        .text-hidden {
+            transition: .5s ease;
+        }
+
+        .phone-hidden {
+            transition: .5s ease;
+            position: absolute;
+            opacity: 0;
+            left: 0;
+            top: 0;
+        }
+
+        &:hover {
+            .text-hidden {
+                opacity: 0;
+            }
+
+            .phone-hidden {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 section.banner {
@@ -88,8 +120,131 @@ section.for-whom {
     padding: 40px 0;
 }
 
+section#form {
+    .multi-step-form {
+        .multi-step-form-slider {
+            .slick-slide {
+                padding-bottom: 1.5rem;
+            }
+        }
+
+        label {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: $black;
+            line-height: 1;
+
+            @media screen and (max-width:576px) {
+                font-size: 1rem;
+            }
+
+            span.color {
+                color: $primary;
+            }
+        }
+
+        span.points {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.625rem 1rem;
+            border: 1px solid $darkgrey;
+            border-radius: 50rem;
+            color: $darkgrey;
+            margin-left: 1.5rem;
+
+            @media screen and (max-width:576px) {
+                font-size: 0.438rem;
+                padding: 0.281rem 0.466rem;
+                margin-left: 0.5rem;
+            }
+        }
+
+        .form-control {
+            border: none;
+            background-color: transparent;
+            margin-top: 1.5rem;
+            padding: 0;
+            color: $darkgrey;
+            line-height: 1;
+            width: 100%;
+            font-size: calc(1.525rem + 3.3vw);
+            font-weight: 700;
+            position: relative;
+
+            @media (min-width: 1200px) {
+                .title {
+                    font-size: 4rem;
+                }
+            }
+
+            &::placeholder {
+                color: $darkgrey;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        button {
+            background-color: $secondary;
+            color: $white;
+            border: none;
+            border-radius: 50rem;
+            padding: 1rem 4.875rem;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+
+            @media screen and (max-width:576px) {
+                padding: 1rem 2rem;
+                width: 100%;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        #prevBtn {
+            cursor: pointer;
+        }
+
+        .custom-file-uploader {
+            position: relative;
+
+            input[type='file'] {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 5;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 footer {
-    background: $primary;
-    padding: 40px 0;
-    text-align: center;
+        background: $dark;
+        padding: 88px 0;
+
+        .socials {
+            a.btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                border-radius: 50%;
+            }
+        }
+
+    // background: $primary;
+    // padding: 40px 0;
+    // text-align: center;
 }
