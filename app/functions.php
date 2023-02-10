@@ -20,3 +20,46 @@ function renderImg($filename, $folder, $classname = "")
 
     return "<img src=" . $src . " alt=" . $filename_without_ext . " class='" . $classname . "'>";
 }
+
+$loan_menu = array(
+    [
+        "url" => 'https://loanoptions.ai/car-loans',
+        "title" => 'Car Loan'
+    ],
+    [
+        "url" => 'https://loanoptions.ai/personal-loans',
+        "title" => 'Personal Loan'
+    ],
+    [
+        "url" => 'https://loanoptions.ai/business-loans',
+        "title" => 'Business Loan'
+    ],
+    [
+        "url" => 'https://loanoptions.ai/equipment-loans',
+        "title" => 'Equipment Loan'
+    ],
+    [
+        "url" => 'https://loanoptions.ai/caravan-loans',
+        "title" => 'Caravan Loan'
+    ],
+    [
+        "url" => 'https://loanoptions.ai/motorcycle-loans',
+        "title" => 'Motorcycle Loan'
+    ],
+    [
+        "url" => 'https://loanoptions.ai/marine-loans',
+        "title" => 'Marine & Other'
+    ],
+    [
+        "url" => 'https://loanoptions.ai/truck-loans',
+        "title" => 'Truck Loans'
+    ],
+    [
+        "url" => 'https://loanoptions.ai/medical-loans',
+        "title" => 'Medical Loans'
+    ],
+    [
+        "url" => 'https://loanoptions.ai/beauty-loans',
+        "title" => 'Beauty Loans'
+    ],
+);

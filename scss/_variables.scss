@@ -2,6 +2,7 @@ $primary: #5614BB;
 $primary-light: #c8a9f9;
 $secondary: #F33829;
 $tertiary: #F0F0F6;
+$tertiarylight: #48475a;
 $quartinary: #320873;
 $dark: #161529;
 $lightblack: #0f0e1e;
@@ -19,6 +20,7 @@ $theme-colors: map-merge(("primary": $primary,
             "primary-light": $primary-light,
             "secondary": $secondary,
             "tertiary": $tertiary,
+            "tertiarylight": $tertiarylight,
             "quartinary": $quartinary,
             "black": $black,
             "white": $white,
@@ -33,9 +35,12 @@ $theme-colors: map-merge(("primary": $primary,
 );
 
 $font-sizes: (
+    96: 96px,
+    80: 80px,
     72: 72px,
     66: 66px,
     64: 64px,
+    50: 50px,
     40: 40px,
     34: 34px,
     24: 24px,

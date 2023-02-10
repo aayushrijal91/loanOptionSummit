@@ -100,3 +100,12 @@ function validateForm() {
     return valid; // return the valid status
 }
 
+$(".ddmenu .menui").on('click', function () {
+    console.log('hit');
+    $(".ddmenu .menui").removeClass("active");
+    $(this).addClass("active");
+    var e = $(this).attr("key");
+    $(".ddmenu .submenu").removeClass("active");
+    $(".ddmenu .submenu[key=" + e + "]").addClass("active");
+    $(".ddmenu .submenu[key=" + e + "]").fadeTo("fast", 1);
+});

@@ -1,22 +1,128 @@
 <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content bg-dark">
-            <div class="modal-header">
-                <a href="./" class="modal-title" id="menuModalLabel">
-                    <?= renderImg("logo.png", "logo") ?>
-                </a>
-                <button type="button" class="bg-none border-none" data-bs-dismiss="modal" aria-label="Close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-lg" viewBox="0 0 16 16">
-                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                    </svg>
+
+            <div class="modal-header  border-0">
+                <div class="site_logo">
+                    <a href="./"><?= renderImg("logo.png", "logo") ?></a>
+                </div>
+                <button type="button" class="d-flex align-items-center btn btn-outline-light text-white text-nowrap px-4 py-2 border rounded-pill border-white text-decoration-none fw-600 gap-2" data-bs-dismiss="modal" aria-label="Close">
+                    <div>Return</div>
+                    <div>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 2L12 13M9 5L1 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="12" cy="2" r="2" fill="#F33829" />
+                        </svg>
+                    </div>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+
+            <div class="modal-body d-flex ">
+                <div class="container my-auto">
+                    <div class="row ddmenu gx-xl-10">
+                        <div class="col-xl-6 border-end border-dpurple">
+                            <div>
+                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="about">
+                                    <div class="text-lightgrey fw-600">About Us</div>
+                                    <div class="text-tertiarylight fs-96 lh-1 fw-800">LoanOptions</div>
+                                </a>
+                            </div>
+                            <div class="d-xl-none mb-4">
+                                <div class="submenu fw-500 fs-20  mb-4 border-bottom border-dpurple" key="about">
+                                    <ul class=" list-unstyled">
+                                        <li class="mb-1"><a href="/about-us" class="text-decoration-none text-white ">Discover Loan Options <small class="ms-2 bg-info px-3 py-2 fw-600 rounded-pill ">HOT</small></a></li>
+                                        <li class="mb-1"><a href="/meet-the-team" class="text-decoration-none text-white ">Meet the ‘Genius’ Team</a></li>
+                                        <li class="mb-1"><a href="/careers" class="text-decoration-none text-white ">Careers</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="loan">
+                                    <div class="text-lightgrey fw-600">Type of Loans</div>
+                                    <div class="text-tertiarylight fs-96 lh-1 fw-800">Loans</div>
+                                </a>
+                            </div>
+                            <div class="d-xl-none mb-4">
+                                <div class="submenu fw-500 fs-20 mb-4 border-bottom border-dpurple" key="loan">
+                                    <ul class=" list-unstyled">
+                                        <?php foreach ($loan_menu as $loan) {   ?>
+                                            <li class="mb-1"><a href="<?= $loan['url'] ?>" class="text-decoration-none text-white"><?php echo $loan['title']; ?></a></li>
+
+                                        <?php } ?>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="faq">
+                                    <div class="text-lightgrey fw-600">FAQ & Resource Centre</div>
+                                    <div class="text-tertiarylight fs-96 lh-1 fw-800">The Bunker</div>
+                                </a>
+                            </div>
+                            <div class="d-xl-none mb-4">
+                                <div class="submenu fw-500 fs-20 mb-4 border-bottom border-dpurple" key="faq">
+                                    <ul class=" list-unstyled">
+                                        <li class="mb-1"><a href="/faqs" class="text-decoration-none text-white ">FAQ - Frequently Asked Questions</a></li>
+                                        <li class="mb-1"><a href="/blog" class="text-decoration-none text-white ">Blogs</a></li>
+                                        <li class="mb-1"><a href="/news-room" class="text-decoration-none text-white ">Newsroom</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="partners">
+                                    <div class="text-lightgrey fw-600">Our Partners</div>
+                                    <div class="text-tertiarylight fs-96 lh-1 fw-800">The Partners</div>
+                                </a>
+                            </div>
+                            <div class="d-xl-none mb-4">
+                                <div class="submenu fw-500 fs-20 mb-4 border-bottom border-dpurple" key="partners">
+                                    <ul class=" list-unstyled">
+                                        <li class="mb-1"><a href="https://skynet.driveiq.com.au/" class="text-decoration-none text-white ">Partner Log In</a></li>
+                                        <li class="mb-1"><a href="/affiliate" class="text-decoration-none text-white ">Become An Affiliate</a></li>
+                                        <li class="mb-1"><a href="/integration-process" class="text-decoration-none text-white ">Integration Process</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 d-none d-xl-block">
+
+                            <div class="submenu mt-5 fw-500 fs-20" key="about">
+                                <ul class=" list-unstyled">
+                                    <li class="mb-3"><a href="/about-us" class="text-decoration-none text-white ">Discover Loan Options <small class="ms-2 bg-primary px-3 py-2 fw-700 rounded-pill ">HOT</small></a></li>
+                                    <li class="mb-3"><a href="/meet-the-team" class="text-decoration-none text-white ">Meet the ‘Genius’ Team</a></li>
+                                    <li class="mb-3"><a href="/careers" class="text-decoration-none text-white ">Careers</a></li>
+
+                                </ul>
+                            </div>
+
+                            <div class="submenu mt-5 fw-500 fs-20" key="loan">
+                                <ul class=" list-unstyled">
+                                    <?php foreach ($loan_menu as $ind => $loan) {   ?>
+                                        <li class="mb-3"><a href="<?= $loan['url'] ?>" class="text-decoration-none text-white"><?php echo $loan['title']; ?></a></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+
+                            <div class="submenu mt-5 fw-500 fs-20" key="faq">
+                                <ul class=" list-unstyled">
+                                    <li class="mb-3"><a href="/faqs" class="text-decoration-none text-white ">FAQ - Frequently Asked Questions</a></li>
+                                    <li class="mb-3"><a href="/blog" class="text-decoration-none text-white ">Blogs</a></li>
+                                    <li class="mb-3"><a href="/news-room" class="text-decoration-none text-white ">Newsroom</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="submenu mt-5 fw-500 fs-20" key="partners">
+                                <ul class=" list-unstyled">
+                                    <li class="mb-3"><a href="https://skynet.driveiq.com.au/" class="text-decoration-none text-white ">Partner Log In</a></li>
+                                    <li class="mb-3"><a href="/affiliate" class="text-decoration-none text-white ">Become An Affiliate</a></li>
+                                    <li class="mb-3"><a href="/integration-process" class="text-decoration-none text-white ">Integration Process</a></li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -80,13 +186,16 @@
 
 <section class="banner pt-4">
     <div class="container">
-        <div class="row align-items-end">
+        <div class="row align-items-end justify-content-between gx-lg-6">
             <div class="col-md-6 py-4 text-center text-md-start">
-                <div class="fs-66 fw-900 lh-1">Meet Julian & Robbie<span class="text-secondary">.</span></div>
-                <div class="pt-2 pb-4 fs-22">Come find us at the Better Business Summit</div>
-                <div class=""><?= renderImg('summit-awards.png', 'lib') ?></div>
+                <div class="fs-80 fw-900 lh-1">Meet Julian & Robbie<span class="text-secondary">.</span></div>
+                <div class="py-4 fs-22">Come find us at the Better Business Summit</div>
+                <div><?= renderImg('summit-awards.png', 'lib') ?></div>
+                <div class="text-end pb-5">
+                    <a href="https://loanoptions.ai/affiliate#apply-now" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-3 mt-4 fs-22">Become A Partner Today</a>
+                </div>
             </div>
-            <div class="col-md-auto">
+            <div class="col-md">
                 <?= renderImg('julian-and-robbie.png', 'lib', 'w-100') ?>
             </div>
         </div>
@@ -134,7 +243,7 @@
         <div class="row justify-content-center align-items-center gy-4">
             <div class="col-auto"><?= renderImg('seamless-integration.png', 'lib') ?></div>
             <div class="col-md">
-                <div class="fw-900 fs-40 pb-2 lh-1">Seamless Integration<span class="text-secondary">.</span></div>
+                <div class="fw-900 fs-50 pb-5 lh-1">Seamless Integration<span class="text-secondary">.</span></div>
                 <div class="fs-24">
                     <p class="pb-2">LoanOptions has launched our white labeled application journey. We can deploy this loan application journey on any website (even if your current one is old) and in any colours that suit your brand.</p>
                     <div>This seamless low code integration uses AI to match clients with more than 68 lenders to get them the best deal. Specialising in car loans, personal loans, business loans and equipment finance.</div>
@@ -148,7 +257,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center gy-4">
             <div class="col-md order-2 order-md-1">
-                <div class="text-quartinary fw-900 fs-34 pb-2">It Can Be Yours Today<span class="text-secondary">.</span></div>
+                <div class="text-quartinary fw-900 fs-50 pb-5">It Can Be Yours Today<span class="text-secondary">.</span></div>
                 <div class="fs-24 fw-500">
                     <p class="pb-2">Implementation is seamless and it takes <span class="fw-700">less than a day</span>. Your company can offer the same transparent quoting tools and matching technology embedded natively on your website!</p>
                     <div>We got so sick of seeing boring “enquire now” finance enquiry forms that lead nowhere and fail to offer the customer any real value from our dinosaur industry.</div>
@@ -161,7 +270,7 @@
 
 <section class="solution">
     <div class="container">
-        <div class="fs-40 fw-900 pb-4">With This Solution You Can<span class="text-secondary">...</span></div>
+        <div class="fs-50 fw-900 pb-5">With This Solution You Can<span class="text-secondary">...</span></div>
         <div class="row gx-2 gy-4">
             <div class="col-6 col-md-3">
                 <?= renderImg('solution-1.png', 'lib', 'w-100') ?>
@@ -180,7 +289,7 @@
                 <div class="pt-3 px-2 text-center fs-18 lh-1 fw-900">Have All Compliance Documents Digitally Signed</div>
             </div>
         </div>
-        <div class="fs-40 fw-900 pt-4 text-end">Completely Seamless<span class="text-secondary">...</span></div>
+        <div class="fs-50 fw-900 pt-4 text-end">Completely Seamless<span class="text-secondary">...</span></div>
     </div>
 </section>
 
@@ -188,11 +297,13 @@
     <div class="container">
         <div class="row justify-content-center align-items-center gx-md-5 gy-4">
             <div class="col-md order-2 order-md-1">
-                <div class="fs-40 fw-900 pb-3">Who is this for?</div>
+                <div class="fs-50 fw-900">Who is this for?</div>
                 <div class="fs-24">
-                    <p class="">The customer’s benefit from the technology, but this is aimed at helping Brokers, lead generators, equipment vendors, medical practices, dealerships, accountants, financial planners, travel agencies and anyone else who needs to offer their clients competitive and transparent loan options.</p>
-                    <div>Due to the size & scale of our lending panel, it also provides other asset finance brokers additional lenders with whom they may not hold an accreditation with. It allows them to capture a lead or an entire application from start to finish including supporting documentation and digitally signed documents.</div>
-                    <a href="#" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-700 px-4 py-3 mt-4 fs-22">Become A Partner Today</a>
+                    <div class="py-4">
+                        <p>The customer’s benefit from the technology, but this is aimed at helping Brokers, lead generators, equipment vendors, medical practices, dealerships, accountants, financial planners, travel agencies and anyone else who needs to offer their clients competitive and transparent loan options.</p>
+                        <div>Due to the size & scale of our lending panel, it also provides other asset finance brokers additional lenders with whom they may not hold an accreditation with. It allows them to capture a lead or an entire application from start to finish including supporting documentation and digitally signed documents.</div>
+                    </div>
+                    <a href="https://loanoptions.ai/affiliate#apply-now" class="btn d-inline-flex btn-secondary rounded-pill text-white fw-600 px-4 px-lg-5 py-3 mt-4 fs-22">Become A Partner Today</a>
                 </div>
             </div>
             <div class="col-auto order-1 order-md-2"><?= renderImg('sb.png', 'lib') ?></div>
@@ -292,7 +403,7 @@
         <div class="row mb-xl-6 mb-4">
             <div class="col-lg col-12">
                 <div class="d-none d-lg-block">
-                    <p class="fw-bold h5 mb-3">Popular Links</p>
+                    <p class="fw-600 h5 mb-3">Popular Links</p>
                     <ul class="text-darkgrey list-unstyled">
                         <li class="mb-2"><a href="./" class="text-darkgrey text-decoration-none">Home</a></li>
                         <li class="mb-2"><a href="https://loanoptions.ai/about-us" class="text-darkgrey text-decoration-none">Discover Loan Options</a></li>
@@ -303,7 +414,7 @@
                         <li class="mb-2"><a href="https://skynet.driveiq.com.au/" class="text-darkgrey text-decoration-none">Partner Login</a></li>
                     </ul>
                 </div>
-                <div class="accordion-item py-3 border-bottom border-darkgrey w-100 mb-3 d-lg-none"><button class="accordion-button fw-bold " id="popular_linksheading" type="button" data-bs-toggle="collapse" data-bs-target="#popular_links" aria-expanded="true" aria-controls="popular_links"> Popular Links </button>
+                <div class="accordion-item py-3 border-bottom border-darkgrey w-100 mb-3 d-lg-none"><button class="accordion-button fw-600 " id="popular_linksheading" type="button" data-bs-toggle="collapse" data-bs-target="#popular_links" aria-expanded="true" aria-controls="popular_links"> Popular Links </button>
                     <div id="popular_links" class="accordion-collapse collapse " aria-labelledby="popular_linksheading">
                         <div class="accordion-body p-0 mt-4">
                             <ul class="text-darkgrey list-unstyled">
@@ -321,21 +432,14 @@
             </div>
             <div class="col-lg col-12">
                 <div class="d-none d-lg-block">
-                    <p class="fw-bold h5 mb-3">Loan Types</p>
+                    <p class="fw-600 h5 mb-3">Loan Types</p>
                     <ul class="text-darkgrey list-unstyled">
-                        <li class="mb-2"><a href="https://loanoptions.ai/car-loans" class="text-darkgrey text-decoration-none">Car Loan</a></li>
-                        <li class="mb-2"><a href="https://loanoptions.ai/personal-loans" class="text-darkgrey text-decoration-none">Personal Loan</a></li>
-                        <li class="mb-2"><a href="https://loanoptions.ai/business-loans" class="text-darkgrey text-decoration-none">Business Loan</a></li>
-                        <li class="mb-2"><a href="https://loanoptions.ai/equipment-loans" class="text-darkgrey text-decoration-none">Equipment Loan</a></li>
-                        <li class="mb-2"><a href="https://loanoptions.ai/caravan-loans" class="text-darkgrey text-decoration-none">Caravan Loan</a></li>
-                        <li class="mb-2"><a href="https://loanoptions.ai/motorcycle-loans" class="text-darkgrey text-decoration-none">Motorcycle Loan</a></li>
-                        <li class="mb-2"><a href="https://loanoptions.ai/marine-loans" class="text-darkgrey text-decoration-none">Marine &amp; Other</a></li>
-                        <li class="mb-2"><a href="https://loanoptions.ai/truck-loans" class="text-darkgrey text-decoration-none">Truck Loans</a></li>
-                        <li class="mb-2"><a href="https://loanoptions.ai/medical-loans" class="text-darkgrey text-decoration-none">Medical Loans</a></li>
-                        <li class="mb-2"><a href="https://loanoptions.ai/beauty-loans" class="text-darkgrey text-decoration-none">Beauty Loans</a></li>
+                        <?php foreach ($loan_menu as $loan) { ?>
+                            <li class="mb-2"><a href="<?= $loan['url'] ?>" class="text-darkgrey text-decoration-none"><?= $loan['title'] ?></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
-                <div class="accordion-item py-3 border-bottom border-darkgrey w-100 mb-3 d-lg-none"><button class="accordion-button fw-bold " id="loan_typesheading" type="button" data-bs-toggle="collapse" data-bs-target="#loan_types" aria-expanded="true" aria-controls="loan_types"> Loan Types </button>
+                <div class="accordion-item py-3 border-bottom border-darkgrey w-100 mb-3 d-lg-none"><button class="accordion-button fw-600 " id="loan_typesheading" type="button" data-bs-toggle="collapse" data-bs-target="#loan_types" aria-expanded="true" aria-controls="loan_types"> Loan Types </button>
                     <div id="loan_types" class="accordion-collapse collapse " aria-labelledby="loan_typesheading">
                         <div class="accordion-body p-0 mt-4">
                             <ul class="text-darkgrey list-unstyled">
@@ -356,7 +460,7 @@
             </div>
             <div class="col-lg col-12">
                 <div class="d-none d-lg-block">
-                    <p class="fw-bold h5 mb-3">About</p>
+                    <p class="fw-600 h5 mb-3">About</p>
                     <ul class="text-darkgrey list-unstyled">
                         <li class="mb-2"><a href="https://loanoptions.ai/about-us" class="text-darkgrey text-decoration-none">Discover Loan Options</a></li>
                         <li class="mb-2"><a href="https://loanoptions.ai/news-room" class="text-darkgrey text-decoration-none">Newsroom</a></li>
@@ -365,7 +469,7 @@
                         <li class="mb-2"><a href="https://loanoptions.ai/meet-the-team" class="text-darkgrey text-decoration-none">Meet the ‘Genius’ Team</a></li>
                     </ul>
                 </div>
-                <div class="accordion-item py-3 border-bottom border-darkgrey w-100 mb-3 d-lg-none"><button class="accordion-button fw-bold " id="aboutheading" type="button" data-bs-toggle="collapse" data-bs-target="#about" aria-expanded="true" aria-controls="about"> About </button>
+                <div class="accordion-item py-3 border-bottom border-darkgrey w-100 mb-3 d-lg-none"><button class="accordion-button fw-600 " id="aboutheading" type="button" data-bs-toggle="collapse" data-bs-target="#about" aria-expanded="true" aria-controls="about"> About </button>
                     <div id="about" class="accordion-collapse collapse " aria-labelledby="aboutheading">
                         <div class="accordion-body p-0 mt-4">
                             <ul class="text-darkgrey list-unstyled">
@@ -381,7 +485,7 @@
             </div>
             <div class="col-lg col-12">
                 <div class="d-none d-lg-block">
-                    <p class="fw-bold h5 mb-3">Support</p>
+                    <p class="fw-600 h5 mb-3">Support</p>
                     <ul class="text-darkgrey list-unstyled">
                         <li class="mb-2"><a href="https://loanoptions.ai/faqs" class="text-darkgrey text-decoration-none">FAQ</a></li>
                         <li class="mb-2"><a href="https://loanoptions.ai/blog" class="text-darkgrey text-decoration-none">Blogs</a></li>
@@ -389,7 +493,7 @@
                         <li class="mb-2"><a href="https://loanoptions.ai/privacy-policy" class="text-darkgrey text-decoration-none">Privacy Policies</a></li>
                     </ul>
                 </div>
-                <div class="accordion-item py-3 border-bottom border-darkgrey w-100 mb-3 d-lg-none"><button class="accordion-button fw-bold " id="supportheading" type="button" data-bs-toggle="collapse" data-bs-target="#support" aria-expanded="true" aria-controls="support"> Support </button>
+                <div class="accordion-item py-3 border-bottom border-darkgrey w-100 mb-3 d-lg-none"><button class="accordion-button fw-600 " id="supportheading" type="button" data-bs-toggle="collapse" data-bs-target="#support" aria-expanded="true" aria-controls="support"> Support </button>
                     <div id="support" class="accordion-collapse collapse " aria-labelledby="supportheading">
                         <div class="accordion-body p-0 mt-4">
                             <ul class="text-darkgrey list-unstyled">

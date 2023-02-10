@@ -2,6 +2,25 @@
 @return url("../images/" + $path + "/" + $file) no-repeat;
 }
 
+#menuModal {
+    button.close_menumodel {
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .submenu {
+        display: none;
+        opacity: 0;
+
+        &.active {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
 header {
     background: $dark;
     padding: 27px;
@@ -100,16 +119,16 @@ section.affiliate-partner {
 section.seamless-integration {
     background: $primary;
     color: $white;
-    padding: 40px 0;
+    padding: 80px 0;
 }
 
 section.implementation {
-    padding: 40px 0;
+    padding: 80px 0;
     background: $tertiary;
 }
 
 section.solution {
-    padding: 40px 0;
+    padding: 80px 0;
     background: $dark;
     color: $white;
 }
@@ -231,20 +250,16 @@ section#form {
 }
 
 footer {
-        background: $dark;
-        padding: 88px 0;
+    background: $dark;
+    padding: 88px 0;
 
-        .socials {
-            a.btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                border-radius: 50%;
-            }
+    .socials {
+        a.btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 50%;
         }
-
-    // background: $primary;
-    // padding: 40px 0;
-    // text-align: center;
+    }
 }
