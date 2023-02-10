@@ -24,7 +24,7 @@
                             <div>
                                 <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="about">
                                     <div class="text-lightgrey fw-600">About Us</div>
-                                    <div class="text-tertiarylight fs-96 lh-1 fw-800">LoanOptions</div>
+                                    <div class="text-menu fs-96 lh-1 fw-800">LoanOptions</div>
                                 </a>
                             </div>
                             <div class="d-xl-none mb-4">
@@ -40,7 +40,7 @@
                             <div>
                                 <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="loan">
                                     <div class="text-lightgrey fw-600">Type of Loans</div>
-                                    <div class="text-tertiarylight fs-96 lh-1 fw-800">Loans</div>
+                                    <div class="text-menu fs-96 lh-1 fw-800">Loans</div>
                                 </a>
                             </div>
                             <div class="d-xl-none mb-4">
@@ -56,7 +56,7 @@
                             <div>
                                 <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="faq">
                                     <div class="text-lightgrey fw-600">FAQ & Resource Centre</div>
-                                    <div class="text-tertiarylight fs-96 lh-1 fw-800">The Bunker</div>
+                                    <div class="text-menu fs-96 lh-1 fw-800">The Bunker</div>
                                 </a>
                             </div>
                             <div class="d-xl-none mb-4">
@@ -71,7 +71,7 @@
                             <div>
                                 <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="partners">
                                     <div class="text-lightgrey fw-600">Our Partners</div>
-                                    <div class="text-tertiarylight fs-96 lh-1 fw-800">The Partners</div>
+                                    <div class="text-menu fs-96 lh-1 fw-800">The Partners</div>
                                 </a>
                             </div>
                             <div class="d-xl-none mb-4">
@@ -118,8 +118,6 @@
                                     <li class="mb-3"><a href="/integration-process" class="text-decoration-none text-white ">Integration Process</a></li>
                                 </ul>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -147,18 +145,20 @@
                         <a href="https://loanoptions.ai/#awards" class=" text-decoration-none text-white text-nowrap fw-600">Award-Winning Business</a>
                     </div>
                     <div class="col-auto d-flex align-items-center gap-2 border-end border-primary-light">
-                        <div>
+                        <div class="position-relative">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 0L9.98545 6.22255H16L11.2131 9.888L13.1985 16L8 12.2225L2.80145 16L4.78691 9.888L0 6.22255H6.01455L8 0Z" fill="#9159E8" />
                             </svg>
+                            <div class="red_dot star"></div>
                         </div>
                         <a href="https://www.google.com/maps/place/LoanOptions.ai/@-33.8344034,151.0873962,15z/data=!4m2!3m1!1s0x0:0xc077907404b9b979?sa=X&amp;ved=2ahUKEwjzmcjL_Nb6AhWCleYKHRYTD7cQ_BJ6BAheEB8" class="text-decoration-none text-white text-nowrap fw-600">383 Google Reviews</a>
                     </div>
                     <div class="col-auto d-flex align-items-center gap-2 border-end border-primary-light">
-                        <div>
+                        <div class="position-relative">
                             <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.257 9.1001L9.70815 7.88212C9.45602 7.76201 9.17415 7.73481 8.90622 7.80473C8.63828 7.87465 8.39924 8.03779 8.22615 8.26886L7.45671 9.30572C6.2098 8.45147 5.15223 7.31286 4.35865 5.97029L5.32065 5.14255C5.53598 4.95636 5.6881 4.69873 5.75335 4.40976C5.81859 4.1208 5.7933 3.81671 5.6814 3.54483L4.54959 0.800014C4.42935 0.508475 4.21692 0.272371 3.95012 0.133763C3.68333 -0.004845 3.37951 -0.036955 3.09278 0.0431536L0.938032 0.646017C0.640761 0.729646 0.382292 0.927779 0.211586 1.20289C0.0408795 1.47799 -0.03021 1.81097 0.0117833 2.13874C0.410814 5.12874 1.69849 7.89909 3.682 10.035C5.66552 12.1709 8.23813 13.5574 11.0146 13.9869C11.0717 13.9956 11.1293 14 11.1869 14C11.4643 13.9998 11.7338 13.9006 11.9533 13.7179C12.1728 13.5352 12.3299 13.2793 12.4 12.9903L12.959 10.6689C13.0344 10.3603 13.0052 10.0327 12.8765 9.74515C12.7478 9.4576 12.5282 9.22888 12.257 9.1001Z" fill="#9159E8" />
                             </svg>
+                            <div class="red_dot phone"></div>
                         </div>
                         <a href="tel:<?= $phone_number ?>" class="call-now fw-600">
                             <div class="text-hidden">Talk to a Human</div>
@@ -171,10 +171,11 @@
                     <div class="col-auto ps-0">
                         <button type="button" class="btn btn-primary d-flex align-items-center gap-2 rounded-pill text-nowrap px-lg-4 px-3 py-2 fs-18 fw-600" data-bs-toggle="modal" data-bs-target="#menuModal">
                             <div>Explore</div>
-                            <div>
+                            <div class="position-relative">
                                 <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 12H15M1 1H11M1 6.5H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+                                <div class="red_dot"></div>
                             </div>
                         </button>
                     </div>

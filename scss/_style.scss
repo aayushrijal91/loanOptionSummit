@@ -19,6 +19,42 @@
             opacity: 1;
         }
     }
+
+    .menui {
+        transition: .5s ease;
+
+        .text-menu {
+            color: $tertiarylight;
+        }
+
+        &.active .text-menu {
+            color: $white;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50rem;
+            background-color: $secondary;
+            left: -100px;
+            bottom: 13px;
+            opacity: 0;
+            transition: .5s ease;
+        }
+
+        &:hover:before {
+            opacity: 1;
+            left: -25px
+        }
+
+        &.active:before {
+            left: 101%;
+            opacity: 1
+        }
+    }
+
 }
 
 header {
@@ -54,6 +90,27 @@ header {
             .phone-hidden {
                 opacity: 1;
             }
+        }
+    }
+
+    .red_dot {
+        display: inline;
+        position: absolute;
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        top: 8px;
+        right: -1px;
+        background: $secondary;
+
+        &.star {
+            top: 5px;
+            right: 1px
+        }
+
+        &.phone {
+            top: 5px;
+            right: 0;
         }
     }
 }
