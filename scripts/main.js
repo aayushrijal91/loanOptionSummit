@@ -63,8 +63,9 @@ function nextPrev(n) {
     if (n == 1 && !validateForm()) return false;
 
     if (currentTab >= x.length - 1) {
-        return false;
+        document.getElementById("regForm1").submit();
     } else {
+        console.log('trigger2');
         currentTab = currentTab + n;
     }
 
