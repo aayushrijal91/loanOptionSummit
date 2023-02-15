@@ -457,7 +457,7 @@
 
             <div class="modal-body d-flex ">
                 <div class="container my-auto">
-                    <div class="row ddmenu gx-xl-10">
+                    <div class="row ddmenu gx-xxl-10">
                         <div class="col-xl-6 border-end border-dpurple">
                             <div>
                                 <a href="javascript:;" class="text-white text-decoration-none mb-xl-5 mb-3 d-inline-block menui position-relative" key="about">
